@@ -1,0 +1,11 @@
+F:\BrashPart\BrashPart_Solutions\Modal_Layer\bin\Debug\Modal_Layer.dll
+F:\BrashPart\BrashPart_Solutions\Modal_Layer\bin\Debug\Modal_Layer.pdb
+F:\BrashPart\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.csproj.CoreCompileInputs.cache
+F:\BrashPart\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.dll
+F:\BrashPart\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.pdb
+F:\BrashPart_Solutions\Modal_Layer\bin\Debug\Modal_Layer.dll
+F:\BrashPart_Solutions\Modal_Layer\bin\Debug\Modal_Layer.pdb
+F:\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.csprojAssemblyReference.cache
+F:\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.csproj.CoreCompileInputs.cache
+F:\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.dll
+F:\BrashPart_Solutions\Modal_Layer\obj\Debug\Modal_Layer.pdb
