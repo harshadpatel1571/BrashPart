@@ -1,0 +1,66 @@
+﻿@model Modal_Layer.PROP_Authentication
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Payroll Login</title>
+    <link href="~/Content/mdb.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+
+</head>
+<body class="Login">
+    @using (Html.BeginForm("ChekLogin", "Auth", FormMethod.Post))
+    {
+        <div class="card text-center shadow-5-strong" style="width:68%; margin-top: 10%; margin-left: 16%;">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-6" style="text-align: left;">
+                        <h4 class="page-item">Admin Login </h4>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="text-align:initial">
+                            <img src="~/images/Logo.png" class="img-fluid" style="text-align:left; width:90%" />
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text text-black">User Name</span>
+                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control col-sm-5" })
+                                @Html.ValidationMessageFor(x => x.UserName, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text text-black">Password &nbsp;&nbsp;</span>
+                                @Html.PasswordFor(x => x.Password, new { @class = "form-control col-sm-5" })
+                                @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="input-group mb-3" style="margin-left:40%">
+                                <button type="submit" class="btn btn-success"> Login </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <script src="~/Scripts/mdb.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+</body>
+</html>

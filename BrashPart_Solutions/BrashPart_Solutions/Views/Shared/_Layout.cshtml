@@ -3,40 +3,149 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - BrashPart-Solutions</title>
+
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
+
+    <script src="~/Scripts/solid.js"></script>
+    <script src="~/Scripts/fontawesome.js"></script>
+
+    <script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+    <link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    <script src="~/Scripts/toastr.min.js"></script>
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    <div class="spinner-grow text-secondary" role="status" id="preloader" style="width: 3rem; height: 3rem; margin-top: 30%; margin-left: 50%; position: absolute">
+        <span class="visually-hidden"> Loading...</span>
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" class="shadow-3-strong">
+            <div class="sidebar-header">
+                <h3>Payroll - Mahavir</h3>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+            <ul class="list-unstyled components activedeactive">
+                <li>
+                    <a href="@Url.Action("Dashboard","DashBoard")">
+                        <i class="fas fa-tachometer-alt fa-1x"></i> &nbsp;
+                        DashBoard
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-list-ol fa-1x"></i> &nbsp;
+                        Employee Master
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="@Url.Action("ListEmployee","Employee")">
+                                <i class="fas fa-user fa-1x"></i> &nbsp;
+                                Employee List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("MissPunch","Attandance")">
+                                <i class="fas fa-hand-pointer fa-1x"></i> &nbsp;
+                                Handle Miss Punch
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Attandance","Attandance")">
+                                <i class="fas fa-calendar-alt fa-1x"></i> &nbsp;
+                                Attandance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("ListHoliday","Holiday")">
+                                <i class="fas fa-calendar-times fa-1x"></i> &nbsp;
+                                Holiday List
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            @*@if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item active">
+                                    <b class="nav-link text-white">Welcome : @User.Identity.Name </b>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-rounded btn-danger" href="@Url.Action("Logout","Auth")" data-toggle="tooltip" title="Logout">
+                                        <b class="fas fa-sign-out-alt fa-2x text-white"></b> &nbsp;
+                                    </a>
+                                </li>
+                            }*@
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            @RenderBody()
+
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
+    <div class="bg-dark text-white" style="text-align: right;">
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <b>Software Develop by :</b> &nbsp;
+            <img src="~/images/Logo.png" width="150" />
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            jQuery("#preloader").remove();
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            $('.activedeactive > li').on('click', function () {
+                $(".active").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+    </script>
+
 </body>
 </html>
