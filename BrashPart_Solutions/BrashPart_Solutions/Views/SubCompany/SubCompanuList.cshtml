@@ -3,6 +3,8 @@
     ViewBag.Title = "SubCompanuList";
 }
 
+<script src="~/Scripts/angular.min.js"></script>
+
 <div class="card text-center shadow-5-strong" style="width: 100%;">
     <div class="card-header">
         <div class="row">
@@ -15,8 +17,7 @@
         </div>
     </div>
     <div class="card-body">
-        <div class="container">
-        </div>
+        <div data-ng-include='"Angular/Template/SubcomapnyList.html"'></div>
     </div>
 </div>
 
