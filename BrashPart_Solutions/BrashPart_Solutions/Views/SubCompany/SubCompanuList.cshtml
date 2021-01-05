@@ -4,21 +4,24 @@
 }
 
 <script src="~/Scripts/angular.min.js"></script>
+<script src="~/Angular/js/SubcomapanyList.js"></script>
+@*<script src="~/Scripts/moment.min.js"></script>*@
 
-<div class="card text-center shadow-5-strong" style="width: 100%;">
+<div class="card shadow-5-strong" style="width: 100%;" ng-app="myApp" , ng-controller="SubcompanyListController">
     <div class="card-header">
         <div class="row">
             <div class="col-6" style="text-align: left;">
-                <h4 class="page-item">SubCompany </h4>
+                <h4 class="page-item">SubCompany List </h4>
             </div>
             <div class="col-6" style="text-align: right;">
-                @Html.ActionLink("Action", "", "", new { @class = "btn btn-primary" })
+                <a href="@Url.Action("Subcomapany List","Subcomapny")" class="btn btn-outline-secondary" data-ripple-color="dark">
+                    <b>
+                        <i class="fas fa-clipboard-list fa-1x"></i> &nbsp;
+                        Subcomapny List
+                    </b>
+                </a>
             </div>
         </div>
     </div>
-    <div class="card-body">
-        <div data-ng-include='"Angular/Template/SubcomapnyList.html"'></div>
-    </div>
+    <div ng-include='"/Angular/Template/SubcompanyList.html"'></div>
 </div>
-
-

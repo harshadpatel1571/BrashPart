@@ -1,8 +1,5 @@
-﻿var app = angular.module('SubCompanyApp', ['cgBusy', 'datatables', 'ngSanitize', 'ui.bootstrap']);
+﻿var app = angular.module('myApp', []);
 
-app.controller('GJSubCompanycontroller', function ($scope, $http, $filter, $timeout, $window, $compile, $uibModal, $location) {
-
-
-
+app.controller('SubcompanyListController', function ($scope, $http) {
 
 });
