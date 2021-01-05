@@ -25,3 +25,12 @@ D:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.csproj.CoreCo
 D:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.csproj.CopyComplete
 D:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.dll
 D:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.pdb
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\bin\Debug\DB_Layer.dll
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\bin\Debug\DB_Layer.pdb
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\bin\Debug\Modal_Layer.dll
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\bin\Debug\Modal_Layer.pdb
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.csprojAssemblyReference.cache
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.csproj.CoreCompileInputs.cache
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.csproj.CopyComplete
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.dll
+F:\BrashPart\trunk\BrashPart_Solutions\DB_Layer\obj\Debug\DB_Layer.pdb
