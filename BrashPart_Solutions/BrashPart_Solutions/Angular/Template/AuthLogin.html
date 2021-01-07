@@ -1,0 +1,25 @@
+﻿<div class="card-body" data-ng-init="Onload()">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6" style="text-align:initial">
+                <img src="../../img/Logo.png" class="img-fluid" style="text-align:left; width:90%" />
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text text-black">User Name</span>
+                    <input type="text" class="form-control col-sm-5" id="txtName" data-ng-model="AuthData.username" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text text-black">Password &nbsp;&nbsp;</span>
+                    <input type="password" class="form-control col-sm-5" id="txtpass" data-ng-model="AuthData.password" />
+                </div>
+
+                <div class="input-group mb-3" style="margin-left:40%">
+                    <button type="submit" class="btn btn-success" data-ng-click="AuthCheck()"> Login </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

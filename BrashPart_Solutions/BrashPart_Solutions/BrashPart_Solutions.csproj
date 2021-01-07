@@ -128,7 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\js\AuthLogin.js" />
     <Content Include="Angular\js\SubcomapanyList.js" />
+    <Content Include="Angular\Template\AuthLogin.html" />
     <Content Include="Angular\Template\SubcompanyList.html" />
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\mdb.min.css" />
@@ -137,6 +139,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\01.jpg" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\fontawesome.js" />
