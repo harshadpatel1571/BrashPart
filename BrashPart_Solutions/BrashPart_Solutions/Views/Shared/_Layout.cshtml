@@ -29,7 +29,7 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar" class="shadow-3-strong">
             <div class="sidebar-header">
-                <h3>Payroll - Mahavir</h3>
+                <h3>Brash Part</h3>
             </div>
             <ul class="list-unstyled components activedeactive">
                 <li>
@@ -41,42 +41,49 @@
                 </li>
 
                 <li>
+                    <a href="#pageParchase" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-list-ol fa-1x"></i> &nbsp;
+                        Purchase
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageParchase">
+                        <li>
+                            <a href="@Url.Action("ListPurchase","purchase")">
+                                <i class="fas fa-user fa-1x"></i> &nbsp;
+                                Add
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSale" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-list-ol fa-1x"></i> &nbsp;
+                        Sale
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSale">
+                        <li>
+                            <a href="@Url.Action("ListEmployee","Employee")">
+                                <i class="fas fa-user fa-1x"></i> &nbsp;
+                                Add
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-list-ol fa-1x"></i> &nbsp;
-                        Employee Master
+                        Due Invoice Section
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="@Url.Action("ListEmployee","Employee")">
                                 <i class="fas fa-user fa-1x"></i> &nbsp;
-                                Employee List
+                                Add
                             </a>
                         </li>
-                        <li>
-                            <a href="@Url.Action("MissPunch","Attandance")">
-                                <i class="fas fa-hand-pointer fa-1x"></i> &nbsp;
-                                Handle Miss Punch
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Attandance","Attandance")">
-                                <i class="fas fa-calendar-alt fa-1x"></i> &nbsp;
-                                Attandance
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("ListHoliday","Holiday")">
-                                <i class="fas fa-calendar-times fa-1x"></i> &nbsp;
-                                Holiday List
-                            </a>
-                        </li>
+
                     </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -139,10 +146,10 @@
                 $(this).toggleClass('active');
             });
 
-            $('.activedeactive > li').on('click', function () {
-                $(".active").removeClass("active");
-                $(this).addClass("active");
-            });
+            //$('.activedeactive > li').on('click', function () {
+            //    $(".active").removeClass("active");
+            //    $(this).addClass("active");
+            //});
         });
 
     </script>

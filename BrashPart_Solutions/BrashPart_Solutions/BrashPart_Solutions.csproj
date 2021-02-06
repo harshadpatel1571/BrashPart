@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\purchaseController.cs" />
     <Compile Include="Controllers\SubCompanyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -129,8 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angular\js\AuthLogin.js" />
+    <Content Include="Angular\js\Purchase.js" />
     <Content Include="Angular\js\SubcomapanyList.js" />
     <Content Include="Angular\Template\AuthLogin.html" />
+    <Content Include="Angular\Template\PurchaseAdd.html" />
     <Content Include="Angular\Template\SubcompanyList.html" />
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\mdb.min.css" />
@@ -168,6 +171,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\SubCompany\SubCompanuList.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\purchase\ListPurchase.cshtml" />
+    <Content Include="Views\purchase\Purchase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Purchase";
+}
+
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Angular/js/Purchase.js"></script>
+@*<script src="~/Scripts/moment.min.js"></script>*@
+
+<div class="card shadow-5-strong" style="width: 100%;" ng-app="myApp" , ng-controller="PurchaseController">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-6" style="text-align: left;">
+                <h4 class="page-item">Purchase Add </h4>
+            </div>
+            <div class="col-6" style="text-align: right;">
+                <a href="@Url.Action("ListPurchase","Purchase")" class="btn btn-outline-secondary" data-ripple-color="dark">
+                    <b>
+                        <i class="fas fa-clipboard-list fa-1x"></i> &nbsp;
+                        Purchase List
+                    </b>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div ng-include='"/Angular/Template/PurchaseAdd.html"'></div>
+</div>
+

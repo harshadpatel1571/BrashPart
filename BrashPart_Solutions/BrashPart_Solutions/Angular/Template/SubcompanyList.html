@@ -1,31 +1,22 @@
 ﻿<div class="card-body">
     <div class="container">
-        <div class="card col-sm-3 shadow-5-strong">
-            <div class="card-header">
-                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/42676/logo.png" class="img-fluid"/>
-            </div>
-            <div class="card-body">
-                Company Name : Test <br />
-            </div>
-            <div class="card-footer text-center">
-                <button class="btn btn-success" data-ng-click="SaveData()">
-                    <i class="fas fa-save fa-1x"></i> &nbsp;
-                    Login Company
-                </button>
+        <div class="row">
+            <div class="col-sm-3" data-ng-repeat="item in SubCompany">
+                <div class="card shadow-5-strong">
+                    <div class="card-header">
+                        <img src="{{item.Sub_logo}}" height="50" width="200"/>
+                    </div>
+                    <div class="card-body">
+                        Company Name : {{item.Sub_CompnayName}}_{{item.Sub_CmId}} <br />
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-success" data-ng-click="SubCompanyData($index)">
+                            <i class="fas fa-save fa-1x"></i> &nbsp;
+                            Login Company
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-        <!--<div class="col-sm-6">
-            <button class="btn btn-danger">
-                <i class="fas fa-window-close fa-1x"></i> &nbsp;
-                Clear Data
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-success" data-ng-click="SaveData()">
-                <i class="fas fa-save fa-1x"></i> &nbsp;
-                Save Data
-            </button>
-        </div>-->
     </div>
 </div>

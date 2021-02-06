@@ -1,0 +1,101 @@
+﻿<div class="card-body" data-ng-init="onLoad()">
+    <div class="container">
+        <b class="text-danger">(*) All filds are mendatory</b> <br /><br />
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b> Raw Material :
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtname" data-ng-model="holidayData.hm_name" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Purchase Date : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtdate" data-ng-model="holidayData.hm_date" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Material Type : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txttype" data-ng-model="holidayData.hm_date" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Invoice No : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txttype" data-ng-model="holidayData.hm_date" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    Invoice File :
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="file" class="form-control col-sm-5" id="img_adhar" onchange="angular.element(this).scope().uploadFile(this.files, 'Photo')" ng-hide="empdata.IsPhotoFileChange == true" />
+                <button class="btn btn-danger" data-ng-click="uploadNewImage()" ng-show="empdata.IsPhotoFileChange==true">
+                    <i class="fa fa-window-close fa-1x"></i>
+                </button>
+                <!--<img src="../../Uploads/Employee/101/Photo/20210109_040145_01.jpg" />-->
+                <a class="btn btn-success" href="{{empdata.URL}}" target="_blank" ng-show="empdata.IsPhotoFileChange==true">
+                    <i class="fa fa-eye fa-1x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Total Amount : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txttype" data-ng-model="holidayData.hm_date" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+
+            <button class="btn btn-success" data-ng-click="SaveData()">
+                <i class="fas fa-save fa-1x"></i> &nbsp;
+                Save Data
+            </button>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="btn btn-danger">
+                <i class="fas fa-window-close fa-1x"></i> &nbsp;
+                Clear Data
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var Hdate = $('input[id="txtdate"]');
+        var options = {
+            language: 'in',
+            format: "dd-mm-yyyy",
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        };
+        Hdate.datetimepicker(options);
+    })
+</script>

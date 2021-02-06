@@ -25,7 +25,7 @@ app.controller('AuthLoginController', function ($scope, $http) {
             toastr.error('Enter Password');
             return false;
         }
-        debugger;
+       
         $http.post("/Auth/ChekLogin", { auth: obj }, { responseType: 'json' })
             .then(function (response) {
                 debugger;
@@ -35,7 +35,7 @@ app.controller('AuthLoginController', function ($scope, $http) {
                     return false;
                 }
                 else {
-                    window.location.href = '/SubCompany/SubCompanuList?id=' + $scope.authdataList[0].FUllUserName;
+                    window.location.href = '/SubCompany/SubCompanuList?id=' + $scope.authdataList[0].CM_CompanyId;
                 }
                 //alert($scope.authdataList[0].FUllUserName);
             });
