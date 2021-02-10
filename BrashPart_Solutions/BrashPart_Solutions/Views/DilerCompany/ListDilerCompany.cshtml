@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "ListDilerCompany";
+}
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Angular/JS/ListDilerCompany.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+
+<div class="card shadow-5-strong" id="card_holiday" style="width: 100%;" ng-app="myApp" , ng-controller="ListDilerCompanyController">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-6" style="text-align: left;">
+                <h4 class="page-item">DilerCompany List</h4>
+            </div>
+            <div class="col-6" style="text-align: right;">
+                <a href="@Url.Action("DilerCompany","DilerCompany")" class="btn btn-outline-secondary" data-ripple-color="dark">
+                    <b>
+                        <i class="fas fa-plus fa-1x"></i> &nbsp;
+                        Add DilerCompany
+                    </b>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div ng-include='"/Angular/Template/ListDilerCompany.html?id=@DateTime.Now"'></div>
+</div>
+
+

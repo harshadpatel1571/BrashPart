@@ -1,0 +1,129 @@
+﻿<div class="card-body" data-ng-init="onLoad()">
+    <div class="container">
+        <div class="row">
+            <!--<div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <span class="input-group-text text-black"> Holiday</span>
+                    <input type="text" class="form-control col-sm-5" data-ng-model="" id="txt_holiday" />
+                </div>
+            </div>-->
+            <!--<div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text text-black">
+                            <b class="text-danger">*</b> Select Year
+                        </span>
+                        <select id="ddlyear" class="form-control col-sm-8" data-ng-model="onDataLoad.year">
+                            <option value="0"> -- Select Year -- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+                            <option data-ng-repeat="y in getYear" value= </option>
+                        </select>
+                        <span class="input-group-text"><i class="dropdown-toggle dropdown-toggle-split"></i></span>
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="col-sm-3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text text-black"> <b class="text-danger">*</b> &nbsp; From Date</span>
+                    <input type="text" class="form-control col-sm-5" data-ng-model="searchData.fromDate" id="txt_fromdate" />
+                </div>
+            </div>-->
+            <!--<div class="col-sm-3 text-left">
+                <button class="btn btn-primary" data-ng-click="getAlldata()">
+                    <i class="fas fa-search fa-1x"></i> &nbsp;
+                    Search
+                </button>
+            </div>-->
+
+        </div>
+        <hr />
+        <div style="overflow:scroll">
+            <div class="panel">
+                <div class="panel-body">
+                    <table class="table table-striped table-responsive table-bordered">
+                        <thead>
+                            <tr>
+                                <th><b>#</b></th>
+                                <th><b>Diler Company</b></th>
+                                <th><b>City</b></th>
+                                <th><b>Phone Number</b></th>
+                                <th><b>Office</b></th>
+                                <th><b>Address</b></th>
+                                <th><b>Email id</b></th>
+                                <th><b>GST No</b></th>
+                                <th><b>Option</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="n in DilerCompanyData" id="tr_{{$index}}">
+                                <td>{{$index+1}}</td>
+                                <td>{{n.DC_CompanyName}}</td>
+                                <td>{{n.CM_CityID}}</td>
+                                <td>{{n.DC_PhoneNo}}</td>
+                                <td>{{n.DC_PhoneNo1}}</td>
+                                <td>{{n.DC_Address}}</td>
+                                <td>{{n.DC_Email}}</td>
+                                <td>{{n.DC_GSTNO}}</td>
+                                <td>
+                                    <a href="/DilerCompany/DilerCompany?temp={{n.DC_id}}" class="btn btn-primary">
+                                        <i class="fas fa-edit fa-1x"></i>
+                                    </a>
+
+                                    <button type="submit"
+                                            class="btn btn-danger"
+                                            data-toggle="modal"
+                                            data-target="#deletemodal"
+                                            data-ng-click="getId($index)">
+                                        <i class="fas fa-trash-alt fa-1x"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-footer">
+</div>
+
+<!-- Modal For Add or Update Data -->
+<div class="modal fade"
+     id="deletemodal"
+     data-backdrop="static"
+     data-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="staticBackdropLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="page-item">Confirm </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <center>
+                        <i class="fas fa-question-circle fa-2x text-danger"></i>  <br />
+                        <b>Do you wont to delete this recored ?</b> <br />
+                    </center>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn_cancel">
+                    <i class="fas fa-window-close fa-1x"></i> &nbsp;
+                    No
+                </button>
+                <button type="submit" class="btn btn-success" data-ng-click="delete()" id="btn_save">
+                    <i class="fas fa-save fa-1x"></i> &nbsp;
+                    Yes
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

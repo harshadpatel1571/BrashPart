@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\DilerCompanyController.cs" />
     <Compile Include="Controllers\purchaseController.cs" />
     <Compile Include="Controllers\SubCompanyController.cs" />
     <Compile Include="Global.asax.cs">
@@ -130,9 +131,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angular\js\AuthLogin.js" />
+    <Content Include="Angular\js\DilerCompany.js" />
+    <Content Include="Angular\js\ListDilerCompany.js" />
     <Content Include="Angular\js\Purchase.js" />
     <Content Include="Angular\js\SubcomapanyList.js" />
     <Content Include="Angular\Template\AuthLogin.html" />
+    <Content Include="Angular\Template\DilerCompany.html" />
+    <Content Include="Angular\Template\ListDilerCompany.html" />
     <Content Include="Angular\Template\PurchaseAdd.html" />
     <Content Include="Angular\Template\SubcompanyList.html" />
     <Content Include="Content\bootstrap-datetimepicker.css" />
@@ -142,7 +147,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="img\01.jpg" />
+    <Content Include="img\Logo.png" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\fontawesome.js" />
@@ -173,6 +178,8 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\purchase\ListPurchase.cshtml" />
     <Content Include="Views\purchase\Purchase.cshtml" />
+    <Content Include="Views\DilerCompany\ListDilerCompany.cshtml" />
+    <Content Include="Views\DilerCompany\DilerCompany.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

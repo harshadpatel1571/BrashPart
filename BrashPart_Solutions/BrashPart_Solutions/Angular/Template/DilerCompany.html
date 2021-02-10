@@ -1,0 +1,191 @@
+﻿<div class="card-body" data-ng-init="onLoad()">
+    <div class="container">
+        <b class="text-danger">(*) All filds are mendatory</b> <br /><br />
+
+        <!--<div class="col-sm-6">
+        <div class="input-group mb-3">
+            <span class="input-group-text text-black">
+                <b class="text-danger">*</b> Select Empployee :
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <select id="ddlemployee" class="form-control col-sm-8" data-ng-model="DilerCompanyData.am_emp_id">
+                <option value="0"> -- Select Employee -- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+                <option data-ng-repeat="e in Employeeddl" value="{{e.emp_punch_id}}"> {{e.emp_full_name}} </option>
+            </select>
+            <span class="input-group-text"><i class="dropdown-toggle dropdown-toggle-split"></i></span>
+        </div>
+    </div>-->
+        <!--<div class="col-sm-6">
+        <div class="input-group mb-3">
+            <span class="input-group-text text-black">
+                <b class="text-danger">*</b>
+                Advance Date : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <input type="text" class="form-control col-sm-5" id="txtdate" data-ng-model="DilerCompanyData.am_date" />
+        </div>
+    </div>-->
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Company Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtCompanyName" data-ng-model="DilerCompanyData.DC_CompanyName" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Company Owner Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtOwnername" data-ng-model="DilerCompanyData.DC_OwnerName" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Select Company : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="ddlCompany" data-ng-model="DilerCompanyData.CM_CompanyId" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Select Subcompany : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="ddlSubcompany" data-ng-model="DilerCompanyData.Sub_CmId" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Select Country : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="ddlCompany" data-ng-model="DilerCompanyData.CM_CountryID" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Select State : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="ddlState" data-ng-model="DilerCompanyData.SM_StateID" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Select City : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="ddlCity" data-ng-model="DilerCompanyData.CM_CityId" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Phone Number : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtphone" data-ng-model="DilerCompanyData.DC_PhoneNo" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Office Number : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtoffice" data-ng-model="DilerCompanyData.DC_PhoneNo1" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Company Address : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtaddress" data-ng-model="DilerCompanyData.DC_Address" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Company Email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtemail" data-ng-model="DilerCompanyData.DC_Email" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Company GST Number : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtgst" data-ng-model="DilerCompanyData.DC_GSTNO" />
+            </div>
+        </div>
+        
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text text-black">
+                    <b class="text-danger">*</b>
+                    Active : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <input type="text" class="form-control col-sm-5" id="txtActive" data-ng-model="DilerCompanyData.DC_IsActive" />
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+
+            <button class="btn btn-danger">
+                <i class="fas fa-window-close fa-1x"></i> &nbsp;
+                Clear Data
+            </button>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="btn btn-success" data-ng-click="SaveData()">
+                <i class="fas fa-save fa-1x"></i> &nbsp;
+                Save Data
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--<script>
+    $(document).ready(function () {
+        var date = $('input[id="txtdate"]');
+        var options = {
+            language: 'in',
+            format: "dd-mm-yyyy",
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        };
+        date.datetimepicker(options);
+    })
+</script>-->
